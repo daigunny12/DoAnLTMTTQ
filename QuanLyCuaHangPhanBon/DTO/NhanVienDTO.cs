@@ -23,17 +23,17 @@ namespace DTO
         public bool TinhTrang { get => tinhTrang; set => tinhTrang = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
 
-        public NhanVienDTO(DataRow row)
-        {
-            this.tenNV = row["TenNV"].ToString();
-            this.sdt = row["SDT"].ToString();
-            this.diaChi = row["DiaChi"].ToString();
-            this.gioiTinh = row["GioiTinh"].ToString();
-            this.ghiChu = row["GhiChu"].ToString();
-            this.maNV = (int)row["MaNV"];
-            this.tinhTrang = (bool)row["TinhTrang"];
-            this.ngaySinh = (DateTime)row["NgaySinh"];
-        }
+        //public NhanVienDTO(DataRow row)
+        //{
+        //    this.tenNV = row["TenNV"].ToString();
+        //    this.sdt = row["SDT"].ToString();
+        //    this.diaChi = row["DiaChi"].ToString();
+        //    this.gioiTinh = row["GioiTinh"].ToString();
+        //    this.ghiChu = row["GhiChu"].ToString();
+        //    this.maNV = (int)row["MaNV"];
+        //    this.tinhTrang = (bool)row["TinhTrang"];
+        //    this.ngaySinh = (DateTime)row["NgaySinh"];
+        //}
 
         public NhanVienDTO(string tenNV, string sdt, string diaChi, string gioiTinh, string ghiChu, int maNV, bool tinhTrang, DateTime ngaySinh)
         {

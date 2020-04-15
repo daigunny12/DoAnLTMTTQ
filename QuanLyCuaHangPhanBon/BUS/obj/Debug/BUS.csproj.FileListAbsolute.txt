@@ -9,3 +9,14 @@ D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.dll
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\BUS.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\BUS.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\DAL.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\DTO.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\DAL.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\bin\Debug\DTO.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\BUS\obj\Debug\BUS.pdb
