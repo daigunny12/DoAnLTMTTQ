@@ -12,7 +12,7 @@ namespace DAL
     public  class NhanVienDALImpl : NhanVienDAL
     {
 
-        private NhanVienDALImpl() { }
+        //private NhanVienDALImpl() { }
 
         private static NhanVienDALImpl instance;
 
@@ -31,11 +31,17 @@ namespace DAL
 
         public bool AddData(NhanVienDTO nv)
         {
-            string query = string.Format("INSERT INTO NhanVien(TenNV, GioiTinh, NgaySinh,DiaChi,SDT,GhiChu,TinhTrang) VALUES (N'{0}',N'{1}',CONVERT (date,{3},103),N'{4}',{5},N'{6}','True')",nv.TenNV , nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.Sdt, nv.GhiChu );
+            string query = string.Format("INSERT INTO NhanVien(TenNV, GioiTinh, NgaySinh,DiaChi,SDT,GhiChu,TinhTrang) VALUES (N'{0}',N'{1}',CONVERT (date,{2},103),N'{3}',{4},N'{5}','True')",nv.TenNV , nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.Sdt, nv.GhiChu );
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
+        public bool UpDateData(NhanVienDTO nv)
+        {
+            string query = string.Format("UPDATE NhanVien SET TenNV=N'{0}', GioiTinh =N'{1}', NgaySinh =CONVERT (date,{2},103), DiaChi =N'{3}', SDT ={4} , GhiChu =N'{5}'  where    MaNV={6}", nv.TenNV, nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.Sdt, nv.GhiChu, nv.MaNV);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
         public bool DelData(int ma)
         {

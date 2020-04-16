@@ -11,7 +11,7 @@ namespace DTO
         private string tenNCC, diaChi, sdt, ghiChu;
         private int maNCC;
         private bool tinhTrang;
-        private decimal SoNo;
+        private decimal soNo;
 
         public NhaCungCapDTO(string tenNCC, string diaChi, string sdt, string ghiChu, int maNCC, bool tinhTrang, decimal soNo)
         {
@@ -21,7 +21,7 @@ namespace DTO
             this.GhiChu = ghiChu;
             this.MaNCC = maNCC;
             this.TinhTrang = tinhTrang;
-            SoNo1 = soNo;
+            SoNo = soNo;
         }
 
         public string TenNCC { get => tenNCC; set => tenNCC = value; }
@@ -30,6 +30,6 @@ namespace DTO
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
         public int MaNCC { get => maNCC; set => maNCC = value; }
         public bool TinhTrang { get => tinhTrang; set => tinhTrang = value; }
-        public decimal SoNo1 { get => SoNo; set => SoNo = value; }
+        public decimal SoNo { get => soNo; set => soNo = value; }
     }
 }

@@ -42,6 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="HangHoaDAL.cs" />
+    <Compile Include="HangHoaDALImpl.cs" />
+    <Compile Include="KhachHangDAL.cs" />
+    <Compile Include="KhachHangDALImpl.cs" />
+    <Compile Include="NhaCungCapDAL.cs" />
+    <Compile Include="NhaCungCapDALImpl.cs" />
     <Compile Include="NhanVienDAL.cs" />
     <Compile Include="NhanVienDALImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

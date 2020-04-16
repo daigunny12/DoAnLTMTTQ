@@ -12,6 +12,7 @@ namespace DAL
     {
         DataTable GetData();
         bool AddData(NhanVienDTO nv);
+        bool UpDateData(NhanVienDTO nv);
         bool DelData(int ma);
     }
 }

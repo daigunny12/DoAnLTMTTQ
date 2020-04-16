@@ -16,3 +16,7 @@ D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.dll
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.pdb
