@@ -20,3 +20,8 @@ D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhan
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.dll
 D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\bin\Debug\DAL.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\bin\Debug\DAL.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\bin\Debug\DTO.dll
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\bin\Debug\DTO.pdb
+D:\BaiTap\LapTrinhMoiTruongTrucQuan\DoAn - Copy (2)\DoAnLTMTTQ\QuanLyCuaHangPhanBon\DAL\obj\Debug\DAL.csproj.CopyComplete
