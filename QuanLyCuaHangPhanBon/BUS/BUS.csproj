@@ -50,6 +50,8 @@
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="NhanVienBUSImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongKeBUS.cs" />
+    <Compile Include="ThongKeBUSImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
