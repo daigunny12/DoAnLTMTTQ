@@ -51,6 +51,8 @@
     <Compile Include="NhanVienDAL.cs" />
     <Compile Include="NhanVienDALImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongKeDAL.cs" />
+    <Compile Include="ThongKeDALImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
