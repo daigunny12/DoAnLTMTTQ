@@ -20,7 +20,42 @@ namespace DAL
 
         public DataTable GetData()
         {
-            string query = "select * from NhaCungCap where TinhTrang = 'True'";
+            string query = "select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where TinhTrang = 'True'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData(string m)
+        {
+            string query = string.Format("select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where TenNCC like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData1(string m)
+        {
+            string query = string.Format("select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where DiaChi like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData2(string m)
+        {
+            string query = string.Format("select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where SDT like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData3(string m)
+        {
+            string query = string.Format("select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where SoNo like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData4(string m)
+        {
+            string query = string.Format("select MaNCC,TenNCC,DiaChi,SDT,SoNo,GhiChu from NhaCungCap where GhiChu like N'%{0}%' AND TinhTrang = 'true'", m);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -44,6 +79,11 @@ namespace DAL
             string query = string.Format("UPDATE NhaCungCap SET TinhTrang= 'False' where MaNCC= {0}", ma);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
+        }
+        public DataTable BaoCaoNhaCungCap()
+        {
+            string query = "exec dbo.sp_BaoCaoNCC";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

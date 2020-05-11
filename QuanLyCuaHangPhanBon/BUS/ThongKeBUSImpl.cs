@@ -28,5 +28,33 @@ namespace BUS
         {
             return thongKeDAL.BaoCaoChiTietBanHang(fromDate, toDate);
         }
+        public DataTable BaoCaoChiTietNhapHang(string fromDate, string toDate)
+        {
+            return thongKeDAL.BaoCaoChiTietNhapHang(fromDate, toDate);
+        }
+        public DataTable BaoCaoHoaDonBanHang(string fromDate, string toDate)
+        {
+            return thongKeDAL.BaoCaoHoaDonBanHang(fromDate, toDate);
+        }
+        public DataTable BaoCaoHoaDonNhapHang(string fromDate, string toDate)
+        {
+            return thongKeDAL.BaoCaoHoaDonNhapHang(fromDate, toDate);
+        }
+        public DataTable BaoCaoXuatKho(string fromDate, string toDate)
+        {
+            return thongKeDAL.BaoCaoXuatKho(fromDate, toDate);
+        }
+        public DataTable BaoCaoNhapKho(string fromDate, string toDate)
+        {
+            return thongKeDAL.BaoCaoNhapKho(fromDate, toDate);
+        }
+        public DataTable BaoCaoTonKho()
+        {
+            return thongKeDAL.BaoCaoTonKho();
+        }
+        public DataTable BaoCaoSoNoKH()
+        {
+            return thongKeDAL.BaoCaoSoNoKH();
+        }
     }
 }

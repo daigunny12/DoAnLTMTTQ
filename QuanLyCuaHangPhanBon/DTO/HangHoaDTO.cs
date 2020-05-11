@@ -13,14 +13,18 @@ namespace DTO
         private int sl, maHH;
         private bool tinhTrang;
 
-        public HangHoaDTO(string teHH, string donViTinh, string ghiChu, decimal giaBan, decimal giaMua, int sl, int maHH, bool tinhTrang)
+        public HangHoaDTO()
+        {
+        }
+
+        public HangHoaDTO(string teHH, string donViTinh, string ghiChu, decimal giaBan, decimal giaMua, int soLuong, int maHH, bool tinhTrang)
         {
             this.TeHH = teHH;
             this.DonViTinh = donViTinh;
             this.GhiChu = ghiChu;
             this.GiaBan = giaBan;
             this.GiaMua = giaMua;
-            this.Sl = sl;
+            this.Sl = soLuong;
             this.MaHH = maHH;
             this.TinhTrang = tinhTrang;
         }

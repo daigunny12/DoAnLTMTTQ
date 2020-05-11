@@ -20,21 +20,56 @@ namespace DAL
 
         public DataTable GetData()
         {
-            string query = "select * from KhachHang where TinhTrang = 'True'";
+            string query = "select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where TinhTrang = 'True'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData(string m)
+        {
+            string query = string.Format("select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where TenKH like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData1(string m)
+        {
+            string query = string.Format("select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where DiaChi like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData2(string m)
+        {
+            string query = string.Format("select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where SDT like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData3(string m)
+        {
+            string query = string.Format("select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where SoNo like N'%{0}%' AND TinhTrang = 'true'", m);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable SearchData4(string m)
+        {
+            string query = string.Format("select MaKH,TenKH,DiaChi,SDT,SoNo,GhiChu from KhachHang where GhiChu like N'%{0}%' AND TinhTrang = 'true'", m);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
 
         public bool AddData(KhachHangDTO kh)
         {
-            string query = string.Format("insert into KhachHang(TenKH,DiaChi,SDT,SoNo,GhiChu,TinhTrang) values (N'{0}',N'{1}',{2},{3},N'{4}','True')", kh.TenKH, kh.DiaChi , kh.Sdt , kh.SoNo, kh.GhiChu);
+            string query = string.Format("insert into KhachHang(TenKH,DiaChi,SDT,SoNo,GhiChu,TinhTrang) values (N'{1}',N'{2}',{3},{4},N'{5}','True')",kh.MaKH, kh.TenKH, kh.DiaChi , kh.Sdt , kh.SoNo, kh.GhiChu);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
         public bool UpDateData(KhachHangDTO kh)
         {
-            string query = string.Format("update NhaCungCap set TenNCC = N'{0}' , DiaChi=N'{1}', SDT ={2}, SoNo = {3} , GhiChu =N'{4}' , TinhTrang = 'True' where MaNCC ={5}", kh.TenKH, kh.DiaChi, kh.Sdt, kh.SoNo, kh.GhiChu, kh.MaKH);
+            string query = string.Format("update KhachHang set TenKH = N'{0}' , DiaChi=N'{1}', SDT ={2}, SoNo = {3} , GhiChu =N'{4}' , TinhTrang = 'True' where MaKH ={5}", kh.TenKH, kh.DiaChi, kh.Sdt, kh.SoNo, kh.GhiChu, kh.MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -44,6 +79,11 @@ namespace DAL
             string query = string.Format("UPDATE KhachHang SET TinhTrang= 'False' where MaKH= {0}", ma);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
+        }
+        public DataTable BaoCaoKhachHang()
+        {
+            string query = "exec dbo.sp_BaoCaoKhachHang";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

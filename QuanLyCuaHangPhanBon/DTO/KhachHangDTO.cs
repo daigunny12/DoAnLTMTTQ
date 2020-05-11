@@ -31,5 +31,9 @@ namespace DTO
             this.tinhTrang = tinhTrang;
             this.soNo = soNo;
         }
+
+        public KhachHangDTO()
+        {
+        }
     }
 }

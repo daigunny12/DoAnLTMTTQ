@@ -46,5 +46,9 @@ namespace DTO
             this.tinhTrang = tinhTrang;
             this.ngaySinh = ngaySinh;
         }
+
+        public NhanVienDTO()
+        {
+        }
     }
 }

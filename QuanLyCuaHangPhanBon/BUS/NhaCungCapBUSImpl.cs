@@ -29,14 +29,48 @@ namespace BUS
             return nhaCungCapDAL.GetData();
         }
 
+        public DataTable SearchData(string m)
+        {
+            return nhaCungCapDAL.SearchData(m);
+        }
+
+        public DataTable SearchData1(string m)
+        {
+            return nhaCungCapDAL.SearchData1(m);
+        }
+
+        public DataTable SearchData2(string m)
+        {
+            return nhaCungCapDAL.SearchData2(m);
+        }
+
+        public DataTable SearchData3(string m)
+        {
+            return nhaCungCapDAL.SearchData3(m);
+        }
+
+        public DataTable SearchData4(string m)
+        {
+            return nhaCungCapDAL.SearchData4(m);
+        }
+
         public bool AddData(NhaCungCapDTO ncc)
         {
             return nhaCungCapDAL.AddData(ncc);
         }
 
+        public bool UpDateData(NhaCungCapDTO ncc)
+        {
+            return nhaCungCapDAL.UpDateData(ncc);
+        }
+
         public bool DelData(int ma)
         {
             return nhaCungCapDAL.DelData(ma);
+        }
+        public DataTable BaoCaoNhaCungCap()
+        {
+            return nhaCungCapDAL.BaoCaoNhaCungCap();
         }
     }
 }

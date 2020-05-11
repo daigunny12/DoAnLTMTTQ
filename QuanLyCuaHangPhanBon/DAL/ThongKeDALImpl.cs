@@ -22,5 +22,40 @@ namespace DAL
             string query = "exec dbo.sp_BaoCaoChiTietBanHang @FromDate , @ToDate ";
             return DataProvider.Instance.ExecuteQuery(query , new object[] {fromDate, toDate });
         }
+        public DataTable BaoCaoChiTietNhapHang(string fromDate, string toDate)
+        {
+            string query = "exec dbo.sp_BaoCaoChiTietNhapHang @FromDate , @ToDate ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+        }
+        public DataTable BaoCaoHoaDonBanHang(string fromDate, string toDate)
+        {
+            string query = "exec dbo.sp_BaoCaoHoaDonBanHang @FromDate , @ToDate ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+        }
+        public DataTable BaoCaoHoaDonNhapHang(string fromDate, string toDate)
+        {
+            string query = "exec dbo.sp_BaoCaoHoaDonNhapHang @FromDate , @ToDate ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+        }
+        public DataTable BaoCaoXuatKho(string fromDate, string toDate)
+        {
+            string query = "exec dbo.sp_BaoCaoXuatKho @FromDate , @ToDate ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+        }
+        public DataTable BaoCaoNhapKho(string fromDate, string toDate)
+        {
+            string query = "exec dbo.sp_BaoCaoNhapKho @FromDate , @ToDate ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+        }
+        public DataTable BaoCaoTonKho()
+        {
+            string query = "exec dbo.sp_BaoCaoTonKho ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable BaoCaoSoNoKH()
+        {
+            string query = "exec dbo.sp_BaoCaoSoNoKH ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

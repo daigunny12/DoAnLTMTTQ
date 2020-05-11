@@ -13,6 +13,10 @@ namespace DTO
         private bool tinhTrang;
         private decimal soNo;
 
+        public NhaCungCapDTO()
+        {
+        }
+
         public NhaCungCapDTO(string tenNCC, string diaChi, string sdt, string ghiChu, int maNCC, bool tinhTrang, decimal soNo)
         {
             this.TenNCC = tenNCC;
@@ -21,7 +25,7 @@ namespace DTO
             this.GhiChu = ghiChu;
             this.MaNCC = maNCC;
             this.TinhTrang = tinhTrang;
-            SoNo = soNo;
+            this.SoNo = soNo;
         }
 
         public string TenNCC { get => tenNCC; set => tenNCC = value; }
