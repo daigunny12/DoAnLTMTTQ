@@ -73,9 +73,49 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconClose {
+            get {
+                object obj = ResourceManager.GetObject("iconClose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconFullscreen {
+            get {
+                object obj = ResourceManager.GetObject("iconFullscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconFullscreenExit {
+            get {
+                object obj = ResourceManager.GetObject("iconFullscreenExit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconLapTop {
             get {
                 object obj = ResourceManager.GetObject("iconLapTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconMin {
+            get {
+                object obj = ResourceManager.GetObject("iconMin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +166,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap iconThongKe {
             get {
                 object obj = ResourceManager.GetObject("iconThongKe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconTilteBar {
+            get {
+                object obj = ResourceManager.GetObject("iconTilteBar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

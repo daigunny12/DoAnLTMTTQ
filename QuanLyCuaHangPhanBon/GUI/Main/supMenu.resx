@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconStore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconStore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconQuanLy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconQuanLy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconThongKe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconThongKe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconNhapHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconNhapHang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconFullscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconFullscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconMin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconMin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconBan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconBan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconFullscreenExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconFullscreenExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconLapTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconLapTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconSetting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconTilteBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconTilteBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
