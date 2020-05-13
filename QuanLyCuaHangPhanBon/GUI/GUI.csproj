@@ -87,6 +87,12 @@
     <Compile Include="frm_CR_BaoCaoChiTietBanHang.Designer.cs">
       <DependentUpon>frm_CR_BaoCaoChiTietBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogIn\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CR_BaoCaoChiTietBanHang.resx">
       <DependentUpon>frm_CR_BaoCaoChiTietBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -173,6 +182,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFullscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFullscreenExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconTilteBar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
