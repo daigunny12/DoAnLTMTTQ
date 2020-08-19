@@ -14,43 +14,28 @@ namespace GUI.QuanLy.NhanVien
 {
     public partial class NhanVien : Form
     {
+        private DangNhapBUS dangNhapBUS = null;
         private NhanVienBUS nhanvienBUS = null;
+
+        private string tenNVZZ = null;
         public NhanVien()
         {
             InitializeComponent();
             this.nhanvienBUS = NhanVienBUSImpl.Instance;
-        }
-        public void Stt()
-        {
-            try
-            {
-                for (int i = 0; i < dtgNhanVien.Rows.Count; i++)
-                {
-                    dtgNhanVien.Rows[i].Cells[0].Value = i + 1;
-                }
-            }
-            catch { }
+            this.dangNhapBUS = DangNhapBUSImpl.Instance;
         }
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dtgNhanVien.DataSource = nhanvienBUS.GetData();
-            dtgNhanVien.BackgroundColor = Color.Red;
-            dtgNhanVien.ForeColor = Color.Green;
-            dtgNhanVien.Columns[1].Width = 0;
-            dtgNhanVien.Columns[0].Width = 40;
-            dtgNhanVien.Columns[3].Width = 70;
-            dtgNhanVien.Columns[4].Width = 100;
-            dtgNhanVien.Columns[5].Width = 250;
-            dtgNhanVien.Columns[2].Width = 150;
-            dtgNhanVien.Columns[6].Width = 100;
-            dtgNhanVien.Columns[7].Width = 150;
-            dtgNhanVien.RowHeadersWidth = 5;
+            dtgNhanVien.Columns[1].Visible = false;      
+            dtgNhanVien.RowHeadersWidth = 10;
+            dtgNhanVien.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 245, 245);
             dtgNhanVien.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
             dtgNhanVien.EnableHeadersVisualStyles = false;
-            dtgNhanVien.ColumnHeadersDefaultCellStyle.BackColor = Color.Cyan;
             dtgNhanVien.AllowUserToResizeColumns = false;
-            Stt();
+            lblMa.Text = dtgNhanVien.Rows[0].Cells[1].Value.ToString();
+            tenNVZZ = dtgNhanVien.Rows[0].Cells[2].Value.ToString();
         }
 
         private void btnThemNV_Click(object sender, EventArgs e)
@@ -87,6 +72,7 @@ namespace GUI.QuanLy.NhanVien
                 {
                     int dong = e.RowIndex;
                     NhanVienDTO nv = new NhanVienDTO();
+                    tenNVZZ = dtgNhanVien.Rows[dong].Cells[2].Value.ToString();
                     nv.MaNV = Convert.ToInt32(dtgNhanVien.Rows[dong].Cells[1].Value.ToString());
                     nv.TenNV = dtgNhanVien.Rows[dong].Cells[2].Value.ToString();
                     nv.GioiTinh = dtgNhanVien.Rows[dong].Cells[3].Value.ToString();
@@ -144,5 +130,33 @@ namespace GUI.QuanLy.NhanVien
         {
             frm_CR_BaoCaoNhanVien nv = new frm_CR_BaoCaoNhanVien();
             nv.Show();        }
+
+        private void dtgNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dtgNhanVien.Rows)
+            {
+                r.Cells["soTT"].Value = r.Index + 1;
+            }
+        }
+
+        private void dtgNhanVien_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            dtgNhanVien.Rows[e.Row.Index].Cells["soTT"].Value = e.Row.Index + 1;
+        }
+
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(lblMa.Text);
+            if (dangNhapBUS.CheckTK(a).Rows.Count > 0)
+            {
+                MessageBox.Show("Nhân viên đã có tài khoản", "Thông báo!");
+            }
+            else
+            {
+                frmThemTaiKhoan frmThemTaiKhoan = new frmThemTaiKhoan(a, tenNVZZ);
+                frmThemTaiKhoan.ShowDialog();
+            }
+            
+        }
     }
 }

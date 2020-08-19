@@ -18,7 +18,7 @@ namespace DAL
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=tcp:vonhatdai.database.windows.net;Initial Catalog=QuanLyCuaHangPhanBon;User ID=daigunny12;Password=Passla1den8";
+        private string connectionSTR = @"Data Source=DESKTOP-SAHD7A7\SQLEXPRESS;Initial Catalog=QuanLyCuaHangPhanBon;User ID=sa;Password=sa";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

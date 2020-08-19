@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhapDAL.cs" />
+    <Compile Include="DangNhapDALImpl.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="HangHoaDAL.cs" />
     <Compile Include="HangHoaDALImpl.cs" />

@@ -20,35 +20,16 @@ namespace GUI.QuanLy.KhachHang
             InitializeComponent();
             this.khachHangBUS = KhachHangBUSImpl.Instance;
         }
-        public void Stt()
-        {
-            try
-            {
-                for (int i = 0; i < dtgKhachHang.Rows.Count; i++)
-                {
-                    dtgKhachHang.Rows[i].Cells[0].Value = i + 1;
-                }
-            }
-            catch { }
-        }
+        
 
         private void KhachHang_Load(object sender, EventArgs e)
         {
-            dtgKhachHang.DataSource = khachHangBUS.GetData();
-            dtgKhachHang.BackgroundColor = Color.Red;
-            dtgKhachHang.ForeColor = Color.Green;
-            dtgKhachHang.Columns[1].Width = 0;
-            dtgKhachHang.Columns[0].Width = 40;
-            dtgKhachHang.Columns[6].Width = 75;
-            dtgKhachHang.Columns[3].Width = 250;
-            dtgKhachHang.Columns[5].Width = 120;
-            dtgKhachHang.Columns[2].Width = 150;
-            dtgKhachHang.Columns[6].Width = 150;
-            dtgKhachHang.RowHeadersWidth = 5;
+            dtgKhachHang.DataSource = khachHangBUS.GetData();         
+            dtgKhachHang.RowHeadersWidth = 10;
+            dtgKhachHang.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 245, 245);
+            dtgKhachHang.Columns[1].Visible = false;
             dtgKhachHang.EnableHeadersVisualStyles = false;
-            dtgKhachHang.ColumnHeadersDefaultCellStyle.BackColor = Color.Cyan;
             dtgKhachHang.AllowUserToResizeColumns = false;
-            Stt();
         }
 
         private void btnThemKH_Click(object sender, EventArgs e)
@@ -137,6 +118,19 @@ namespace GUI.QuanLy.KhachHang
         {
             frm_CR_BaoCaoKhachHang kh = new frm_CR_BaoCaoKhachHang();
             kh.Show();
+        }
+
+        private void dtgKhachHang_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dtgKhachHang.Rows)
+            {
+                r.Cells["soTT"].Value = r.Index + 1;
+            }
+        }
+
+        private void dtgKhachHang_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            dtgKhachHang.Rows[e.Row.Index].Cells["soTT"].Value = e.Row.Index + 1;
         }
     }
 }

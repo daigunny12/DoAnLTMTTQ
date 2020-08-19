@@ -8,25 +8,27 @@ namespace DTO
 {
     public class TaiKhoanDTO
     {
-        private string tenDN, matKhau, chucVu, tenNV;
-        private int maTK;
-        private bool tinhTrang;
+        private int maNV;
+        private string tenNV, matKhau, tenDN;
+        private bool chucVu;
 
-        public TaiKhoanDTO(string tenDN, string matKhau, string chucVu, string tenNV, int maTK, bool tinhTrang)
+        public TaiKhoanDTO()
         {
-            this.TenDN = tenDN;
-            this.MatKhau = matKhau;
-            this.ChucVu = chucVu;
-            this.TenNV = tenNV;
-            this.MaTK = maTK;
-            this.TinhTrang = tinhTrang;
         }
 
-        public string TenDN { get => tenDN; set => tenDN = value; }
-        public string MatKhau { get => matKhau; set => matKhau = value; }
-        public string ChucVu { get => chucVu; set => chucVu = value; }
+        public TaiKhoanDTO(int maNV, string tenNV, string matKhau, string tenDN, bool chucVu)
+        {
+            this.MaNV = maNV;
+            this.TenNV = tenNV;
+            this.MatKhau = matKhau;
+            this.TenDN = tenDN;
+            this.ChucVu = chucVu;
+        }
+
+        public int MaNV { get => maNV; set => maNV = value; }
         public string TenNV { get => tenNV; set => tenNV = value; }
-        public int MaTK { get => maTK; set => maTK = value; }
-        public bool TinhTrang { get => tinhTrang; set => tinhTrang = value; }
+        public string MatKhau { get => matKhau; set => matKhau = value; }
+        public string TenDN { get => tenDN; set => tenDN = value; }
+        public bool ChucVu { get => chucVu; set => chucVu = value; }
     }
 }

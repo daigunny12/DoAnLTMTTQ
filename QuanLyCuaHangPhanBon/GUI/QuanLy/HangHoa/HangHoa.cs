@@ -20,7 +20,7 @@ namespace GUI.QuanLy.HangHoa
             InitializeComponent();
             this.hanghoaBUS = HangHoaBUSImpl.Instance;
         }
-        void timkiem()
+        private void timkiem()
         {
              if (comboBox1.Text == "Sản Phẩm")
              {
@@ -47,35 +47,15 @@ namespace GUI.QuanLy.HangHoa
                 dtgHangHoa.DataSource = hanghoaBUS.SearchData5(textBox1.Text);
              }
         }
-        void Stt()
-        {
-            try
-            {
-                for (int i = 0; i < dtgHangHoa.Rows.Count; i++)
-                {
-                    dtgHangHoa.Rows[i].Cells[0].Value = i + 1;
-                }
-            }
-            catch { }
-        }
+            
         private void HangHoa_Load(object sender, EventArgs e)
         {
             dtgHangHoa.DataSource = hanghoaBUS.GetData();
-            Stt();
-            dtgHangHoa.BackgroundColor = Color.Red;
-            dtgHangHoa.ForeColor = Color.Green;
-            dtgHangHoa.Columns[1].Width = 0;
-            dtgHangHoa.Columns[0].Width = 40;
-            dtgHangHoa.Columns[6].Width = 75;
-            dtgHangHoa.Columns[2].Width = 150;
-            dtgHangHoa.Columns[4].Width = 120;
-            dtgHangHoa.Columns[5].Width = 120;
-            dtgHangHoa.Columns[7].Width = 150;
-            dtgHangHoa.RowHeadersWidth = 5;
+            dtgHangHoa.Columns[1].Visible = false;
+            dtgHangHoa.RowHeadersWidth = 10;
+            dtgHangHoa.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 245, 245);
             dtgHangHoa.EnableHeadersVisualStyles = false;
-            dtgHangHoa.ColumnHeadersDefaultCellStyle.BackColor = Color.Cyan;
             dtgHangHoa.AllowUserToResizeColumns = false;
-
         }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
@@ -84,9 +64,6 @@ namespace GUI.QuanLy.HangHoa
             themhh.ShowDialog();
             HangHoa_Load(sender, e);
         }
-
-
-
 
         private void dtgHangHoa_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -146,6 +123,19 @@ namespace GUI.QuanLy.HangHoa
         {
             frm_CR_BaoCaoHangHoa hh = new frm_CR_BaoCaoHangHoa();
             hh.Show();
+        }
+
+        private void dtgHangHoa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dtgHangHoa.Rows)
+            {
+                r.Cells["soTT"].Value = r.Index + 1;
+            }
+        }
+
+        private void dtgHangHoa_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            dtgHangHoa.Rows[e.Row.Index].Cells["soTT"].Value = e.Row.Index + 1;
         }
     }
 }

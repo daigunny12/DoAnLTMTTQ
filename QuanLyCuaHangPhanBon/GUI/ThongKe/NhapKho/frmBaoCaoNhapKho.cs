@@ -53,5 +53,10 @@ namespace GUI.ThongKe.NhapKho
 
             dgvThongKe.DataSource = thongKeBUS.BaoCaoNhapKho(fromDate, toDate);
         }
+
+        private void frmBaoCaoNhapKho_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

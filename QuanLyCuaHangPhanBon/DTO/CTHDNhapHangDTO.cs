@@ -13,6 +13,11 @@ namespace DTO
         private decimal donGia, tienCK, thanhTien, ck;
         private bool tinhTrang;
 
+        public CTHDNhapHangDTO()
+        {
+
+        }
+
         public CTHDNhapHangDTO(string dvt, int sanPham, int sl, int maHDNH, decimal donGia, decimal tienCK, decimal thanhTien, decimal ck, bool tinhTrang)
         {
             this.Dvt = dvt;

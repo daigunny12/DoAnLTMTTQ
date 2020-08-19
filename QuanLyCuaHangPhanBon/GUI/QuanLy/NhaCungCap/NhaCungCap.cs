@@ -20,33 +20,15 @@ namespace GUI.QuanLy.NhaCungCap
             InitializeComponent();
             this.nhaCungCapBUS = NhaCungCapBUSImpl.Instance;
         }
-        public void Stt()
-        {
-            try
-            {
-                for (int i = 0; i < dtgNhaCungCap.Rows.Count; i++)
-                {
-                    dtgNhaCungCap.Rows[i].Cells[0].Value = i + 1;
-                }
-            }
-            catch { }
-        }
+
         private void NhaCungCap_Load(object sender, EventArgs e)
         {
             dtgNhaCungCap.DataSource = nhaCungCapBUS.GetData();
-            dtgNhaCungCap.BackgroundColor = Color.Red;
-            dtgNhaCungCap.ForeColor = Color.Green;
-            dtgNhaCungCap.Columns[1].Width = 0;
-            dtgNhaCungCap.Columns[0].Width = 40;
-            dtgNhaCungCap.Columns[2].Width = 170;
-            dtgNhaCungCap.Columns[3].Width = 250;
-            dtgNhaCungCap.Columns[5].Width = 120;
-            dtgNhaCungCap.Columns[6].Width = 150;
-            dtgNhaCungCap.RowHeadersWidth = 5;
+            dtgNhaCungCap.Columns[1].Visible = false;
+            dtgNhaCungCap.RowHeadersWidth = 10;
+            dtgNhaCungCap.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 245, 245);
             dtgNhaCungCap.EnableHeadersVisualStyles = false;
-            dtgNhaCungCap.ColumnHeadersDefaultCellStyle.BackColor = Color.Cyan;
             dtgNhaCungCap.AllowUserToResizeColumns = false;
-            Stt();
         }
 
         private void dtgNhaCungCap_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -135,6 +117,19 @@ namespace GUI.QuanLy.NhaCungCap
         {
             frm_CR_BaoCaoNhaCungCap ncc = new frm_CR_BaoCaoNhaCungCap();
             ncc.Show();
+        }
+
+        private void dtgNhaCungCap_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dtgNhaCungCap.Rows)
+            {
+                r.Cells["soTT"].Value = r.Index + 1;
+            }
+        }
+
+        private void dtgNhaCungCap_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            dtgNhaCungCap.Rows[e.Row.Index].Cells["soTT"].Value = e.Row.Index + 1;
         }
     }
 }

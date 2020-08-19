@@ -21,7 +21,7 @@ namespace DAL
 
         public DataTable GetData()
         {
-            string query = "select MaHH,TenHH,DonViTinh,GiaBan,GiaMua,SoLuong,GhiChu from HangHoa where TinhTrang = 'True'";
+            string query = "select MaHH,TenHH,DonViTinh,GiaBan,GiaMua,SoLuong,GhiChu from HangHoa where TinhTrang = 'True' and MaHH != 3";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
